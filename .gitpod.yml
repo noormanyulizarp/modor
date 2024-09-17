@@ -1,0 +1,18 @@
+image:
+  file: .gitpod.Dockerfile
+
+tasks:
+  - init: |
+      npm install
+      # Add any other initialization steps here
+  - command: |
+      # Start your custom environment here
+      echo "Starting ask-ui environment..."
+
+ports:
+  - port: 3000
+    onOpen: open-preview
+
+vscode:
+  extensions:
+    - dbaeumer.vscode-eslint
